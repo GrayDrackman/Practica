@@ -52,7 +52,7 @@ function importPlayer(){
 			console.log("[CR Premium] Eliminando Inscripción a la prueba gratuita...");
 			document.body.querySelector("#showmedia_free_trial_signup").style.display = "none";
 		}
-
+/*
         // Simular la interacción del usuario para dejarlo en pantalla completa automáticamente
 		var element = document.getElementById("template_scroller");
 		if (element) element.click();
@@ -72,7 +72,7 @@ function importPlayer(){
         		},"*");
 			};
 		});
-
+*/
 		//console.log(video_config_media);
 }
 //función al cargar la página.
