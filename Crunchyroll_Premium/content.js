@@ -25,7 +25,7 @@ function importPlayer(){
 		ifrm.setAttribute("width","100%");
 		ifrm.setAttribute("height","100%");
 		ifrm.setAttribute("frameborder","0");
-		ifrm.setAttribute("scrolling","no");
+		ifrm.setAttribute("scrolling","yes");
 		ifrm.setAttribute("allowfullscreen","allowfullscreen");
 		ifrm.setAttribute("allow","autoplay; encrypted-media *");
 
@@ -52,7 +52,7 @@ function importPlayer(){
 			console.log("[CR Premium] Eliminando Inscripción a la prueba gratuita...");
 			document.body.querySelector("#showmedia_free_trial_signup").style.display = "none";
 		}
-/*
+
         // Simular la interacción del usuario para dejarlo en pantalla completa automáticamente
 		var element = document.getElementById("template_scroller");
 		if (element) element.click();
@@ -72,7 +72,7 @@ function importPlayer(){
         		},"*");
 			};
 		});
-*/
+
 		//console.log(video_config_media);
 }
 //función al cargar la página.
