@@ -79,6 +79,7 @@ function importPlayer(){
 //función al cargar la página.
 function onloadfunction() {
 	if(pegaString(HTML, "vilos.config.media = ", ";") != null){
+		document.body.style.overflow = "visible";
 		importPlayer();
 	}
 }
