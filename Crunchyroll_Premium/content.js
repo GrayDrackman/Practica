@@ -25,7 +25,7 @@ function importPlayer(){
 		ifrm.setAttribute("width","100%");
 		ifrm.setAttribute("height","100%");
 		ifrm.setAttribute("frameborder","0");
-		ifrm.setAttribute("scrolling","auto");
+		ifrm.setAttribute("scrolling","manual");
 		ifrm.setAttribute("allowfullscreen","allowfullscreen");
 		ifrm.setAttribute("allow","autoplay; encrypted-media *");
 
