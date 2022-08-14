@@ -1,21 +1,30 @@
-const aseguir = document.getElementById('aseguir');
-const cooldown = document.getElementById('cooldown');
+const globalDefault = { 'webvideocaster': false, 'cooldown': 5, 'aseguir': true, 'forcemp4': false }
+const globalVariables = Object.keys(globalDefault)
 
-aseguir.onchange = () => {
-    chrome.storage.sync.set({'aseguir': aseguir.checked});
+chrome.storage.sync.get(globalVariables, function (items) {
+  globalVariables.forEach(popupElement => {
+    const value = items[popupElement] === undefined ? globalDefault[popupElement] : items[popupElement]
+    setValue(popupElement, value)
+  })
+})
+
+globalVariables.forEach(popupElement => {
+  document.getElementById(popupElement).addEventListener("input", () => {
+    let syncValue = {}
+    syncValue[popupElement] = getValue(popupElement)
+
+    chrome.storage.sync.set(syncValue);
+  })
+})
+
+function getValue(id) {
+  const element = document.getElementById(id)
+  if (element.type === 'checkbox') return element.checked
+  else return element.value
 }
 
-cooldown.onchange = () => {
-    chrome.storage.sync.set({'cooldown': cooldown.value});
+function setValue(id, value) {
+  const element = document.getElementById(id)
+  if (element.type === 'checkbox') element.checked = value
+  else element.value = value
 }
-
-chrome.storage.sync.get(['aseguir', 'cooldown'], function(items) {
-    if (items.aseguir === undefined) {
-        chrome.storage.sync.set({'aseguir': true, 'cooldown': 5});
-        aseguir.checked = true;
-        cooldown.value = 5;
-    } else {
-        aseguir.checked = items.aseguir;
-        cooldown.value = items.cooldown;
-    }
-});
