@@ -122,6 +122,7 @@ function addPlayer(element, playerInfo, beta = false) {
   ifrm.setAttribute("height", "100%");
   ifrm.setAttribute("frameborder", "0");
   ifrm.setAttribute("scrolling", "auto");
+  ifrm.setAttribute("overflow","visible");
   ifrm.setAttribute("allowfullscreen", "allowfullscreen");
   ifrm.setAttribute("allow", "autoplay; encrypted-media *");
 
