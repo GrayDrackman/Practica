@@ -13,7 +13,7 @@
       ]
     },
     "condition": {
-      "regexFilter": "^https?://(mateus7g\\.github\\.io|(?:ll|fy)\\.v\\.vrv\\.co|pl\\.crunchyroll\\.com|www\\.crunchyroll\\.com|localhost)/",
+      "regexFilter": "^https?://(graydrackman\\.github\\.io|(?:ll|fy)\\.v\\.vrv\\.co|pl\\.crunchyroll\\.com|www\\.crunchyroll\\.com|localhost)/",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
