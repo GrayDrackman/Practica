@@ -117,7 +117,7 @@ function addPlayer(element, playerInfo, beta = false) {
   console.log("[CR Premium] Añadir jwplayer...");
   var ifrm = document.createElement("iframe");
   ifrm.setAttribute("id", "frame");
-  ifrm.setAttribute("src", "https://GrayDrackman.github.io/Practica/");
+  ifrm.setAttribute("src", "https://mateus7g.github.io/crp-iframe-player/");
   ifrm.setAttribute("width", "100%");
   ifrm.setAttribute("height", "100%");
   ifrm.setAttribute("frameborder", "0");
